@@ -4,8 +4,6 @@ PROCESSORS = processors
 
 .PHONY: all
 
-
-
 school_links.csv: catalog_page.html
 	cat $(DATA_DIR)/$< | python $(PROCESSORS)/extract_links.py $(CATALOG_URL) > $(DATA_DIR)/$@
 
